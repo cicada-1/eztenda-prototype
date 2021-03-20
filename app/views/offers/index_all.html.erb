@@ -16,13 +16,19 @@
 
     <div class="offers-list">
       <% @offers.each do |offer| %>
-        <div class="offer-card">
-          <p><%= offer.venue.venue_name %></p>
-          <p><%= offer.min_bid %></p>
-          <p><%= offer.contract_length %></p>
-          <p><%= offer.estimated_volume %></p>
-          <span id="text-muted">Created <%= time_ago_in_words(offer.updated_at) %> ago</span>
+        <div class="card-product">
+          <img class="card-image" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-product-infos">
+              <p> <%= offer.venue.venue_name %> </p> 
+            <%= offer.min_bid %>
+            <%= offer.estimated_volume %>
+            <br>
+            <span id="text-muted">Created <%= time_ago_in_words(offer.updated_at) %> ago</span>
+
+              </div>
+          </div>
         </div>
+
       <% end %>
     </div>
 </div>
