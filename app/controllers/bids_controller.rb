@@ -1,6 +1,6 @@
 class BidsController < ApplicationController
   def index
-    @bid = Bid.all
+    @bids = Bid.all
   end
 
   def show
@@ -17,8 +17,8 @@ class BidsController < ApplicationController
     if @bid.save!
       redirect_to brand_bids_path
     else
-      render :new 
-    end   
+      render :new
+    end
   end
 
   def destroy
