@@ -1,26 +1,26 @@
+<br>
 <div class="container my-5">
-<h2>ALL OFFERS</h2>
-<div class="request-cards text-center">
-<div class="row">
-<% @offers.each do |offer| %>
- <div class="card-product">
-  <img class="card-image" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="card-product-infos card-offer">
-       <h4> <%= offer.venue.venue_name %> </h4> 
-       <ul>
-       <li>Category: <%= offer.category %></li>
-    <li>Minimun Bid:  <%= offer.min_bid %> </li>
-    <li>Contract Length:  <%= offer.contract_length %></li>
-    <li>Estimated Volume:  <%= offer.estimated_volume %></li>
-    
-     </ul>
-     <p><span id="text-muted" style="float: right";>Created <%= time_ago_in_words(offer.updated_at) %> ago</span></p>
-      </div>
+<h2>ALL OFFERS </h2>
+  <div class="request-cards text-center">
+    <div class="row">
+    <% @offers.each do |offer| %>
+    <div class="card-product">
+    <img class="card-image" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos card-offer">
+        <h4> <%= offer.venue.venue_name %> </h4> 
+            <ul>
+            <li>Category: <%= offer.category %></li>
+                <li>Minimun Bid:  <%= offer.min_bid %> </li>
+                <li>Contract Length:  <%= offer.contract_length %></li>
+                <li>Estimated Volume:  <%= offer.estimated_volume %></li>
+            </ul>
+            <p><span id="text-muted" style="float: right";>Created <%= time_ago_in_words(offer.updated_at) %> ago</span></p>
+        </div>
+    </div>
+    </div>
+    <% end %>
   </div>
-</div>
- <% end %>
-</div>
-</div>
+  </div>
 </div>
 
 
