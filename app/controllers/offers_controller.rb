@@ -1,12 +1,20 @@
 class OffersController < ApplicationController
-  before_action :set_offer, only: [:show, :edit, :destroy]
+  before_action :set_offer, only: [:show, :show_limited, :edit, :destroy]
 
   def index
     @offers = Offer.where(venue_id: current_user.venue.id)
   end
 
+  def index_all
+    @offers = Offer.all
+  end
+
   def show
     @bids = Bid.where(offer_id: @offer.id)
+  end
+  
+  def show_limited
+    @bid = Bid.new
   end
 
   def new
