@@ -1,4 +1,4 @@
-<%= simple_form_for @offer do |f| %>
+<%= simple_form_for [@venue, @offer] do |f| %>
   <div class="form-inputs">
     <%= f.input :min_bid, placeholder: '500' %>
     <%= f.input :contract_length, placeholder: '12' %>
