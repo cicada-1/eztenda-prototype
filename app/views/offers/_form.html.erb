@@ -1,8 +1,13 @@
 <%= simple_form_for @offer do |f| %>
-  <%= f.input :min_bid, placeholder: '500' %>
-  <%= f.input :contract_length, placeholder: '12' %>
-  <%= f.input :estimated_volume, placeholder: '1000' %>
-  <%= f.input :category, collection: Offer::CATEGORIES, selected: "Gin" %>
-  <%= f.input :photo, as: :file %>
-  <%= f.button :submit %>
+  <div class="form-inputs">
+    <%= f.input :min_bid, placeholder: '500' %>
+    <%= f.input :contract_length, placeholder: '12' %>
+    <%= f.input :estimated_volume, placeholder: '1000' %>
+    <%= f.input :category, collection: Offer::CATEGORIES, selected: "Gin" %>
+    <%= f.input :photo, as: :file %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, { class: "btn btn-primary", value: "Create Offer" } %>
+  </div>
 <% end %>
