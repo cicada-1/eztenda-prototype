@@ -1,0 +1,8 @@
+<%= simple_form_for @venue do |f| %>
+  <%= f.input :venue_name, placeholder: 'The EzTenda Arms' %>
+  <%= f.input :address, placeholder: '123, Street Road, London EZ7 3ND' %>
+  <%= f.input :phone_number, placeholder: '01234567890' %>
+  <%= f.input :description, as: :text, placeholder: 'Please a short description' %>
+  <%= f.input :photo, as: :file %>
+  <%= f.button :submit %>
+<% end %>
