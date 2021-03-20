@@ -1,34 +1,35 @@
-<div class="container">
-  <div class="dropdown-and-clear-button">
-    <p><strong>Filter by category:</strong></p>
-    <div class="dropdown" id="category-dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <%= @dropdown_text %>
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <% Offer::CATEGORIES.each do |category| %>
-          <a class="dropdown-item category-item" href="/offers.php?category=<%= category %>"><%= category %></a>
-        <% end %>
+<div class="fs-container">
+  <div class="index-container">
+    <div class="dropdown-and-clear-button">
+      <p><strong>Filter by category:</strong></p>
+      <div class="dropdown" id="category-dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= @dropdown_text %>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <% Offer::CATEGORIES.each do |category| %>
+            <a class="dropdown-item category-item" href="/offers.php?category=<%= category %>"><%= category %></a>
+          <% end %>
+        </div>
       </div>
+      <%= link_to "Clear filter", offers_path %>
     </div>
-    <%= link_to "Clear filter", offers_path %>
-  </div>
 
     <div class="offers-list">
       <% @offers.each do |offer| %>
-        <div class="card-product">
+        <div class="card-product all-offers-card">
           <img class="card-image" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
           <div class="card-product-infos">
-              <p> <%= offer.venue.venue_name %> </p> 
-            <%= offer.min_bid %>
-            <%= offer.estimated_volume %>
-            <br>
+            <p id="offer-card-title"><strong><%= offer.venue.venue_name %> - <%= offer.category %></strong></p>
+            <div class="min-bid-est-vol">
+              <p id="min-bid">£<%= offer.min_bid %></p>
+              <p id="est-vol"><%= offer.estimated_volume %></p>
+            </div>
+            <p><%= offer.bids.count %> Bids</p>
             <span id="text-muted">Created <%= time_ago_in_words(offer.updated_at) %> ago</span>
-
-              </div>
           </div>
         </div>
-
       <% end %>
     </div>
+  </div>
 </div>
