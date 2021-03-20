@@ -8,31 +8,26 @@ class BidsController < ApplicationController
   end
 
   def new
+    @brand = Brand.find(params[:brand_id])
     @bid = Bid.new
   end
 
   def create
-    @bid = Bid.new(bid_params)
-    if @bid.save
-      redirect_to bid_path(@bid)
+    @bid = Bid.new(bid_params.merge(brand_id: params[:brand_id]))
+    if @bid.save!
+      redirect_to brand_bids_path
     else
       render :new 
     end   
-  end
-
-    
-    
   end
 
   def destroy
     @bid.delete(@bid)
   end
 
-private
+  private
 
-def bid_params
-  params[:bid].permit(:offer_amount, :additional)
-end
-
-
+  def bid_params
+    params.require(:bid).permit(:offer_amount, :additional)
+  end
 end

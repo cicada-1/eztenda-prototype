@@ -1,5 +1,5 @@
 class Bid < ApplicationRecord
-  belongs_to :user
+  belongs_to :brand
 
-  validates :offer_amount, precence: true
+  validates :offer_amount, presence: true
 end

@@ -1,12 +1,10 @@
 class BrandsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index]
-
   def new
     @brand = Brand.new
   end
 
   def create
-    @brand = Brand.new(brand_params)
+    @brand = Brand.new(brand_params.merge(user_id: current_user.id))
     if @brand.save
       redirect_to brand_path(@brand)
     else
@@ -39,12 +37,9 @@ class BrandsController < ApplicationController
     @brand.delete
   end
 
-private
+  private
 
-
-def brand_params
-  params.require(:brand).permit(:brand_name, :address, :phone_number, :description)  
-end
-
-
+  def brand_params
+    params.require(:brand).permit(:brand_name, :address, :phone_number, :description)  
+  end
 end
