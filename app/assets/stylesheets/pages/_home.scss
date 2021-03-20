@@ -26,11 +26,19 @@
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(placeholder.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(barrel.jpg);
   height: 600px;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+.opaque-background {
+  background-color: rgba(0, 0, 0, 0.3);
+  // width: 80%;
+  margin: auto;
+}
+li {
+  list-style: none;
 }

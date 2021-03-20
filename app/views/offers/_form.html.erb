@@ -1,0 +1,12 @@
+<%= simple_form_for [@venue, @offer] do |f| %>
+  <div class="form-inputs">
+    <%= f.input :min_bid, placeholder: '500' %>
+    <%= f.input :contract_length, placeholder: '12' %>
+    <%= f.input :estimated_volume, placeholder: '1000' %>
+    <%= f.input :category, collection: Offer::CATEGORIES, selected: "Gin" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, { class: "btn btn-primary", value: "Create Offer" } %>
+  </div>
+<% end %>
