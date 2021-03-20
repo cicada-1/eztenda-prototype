@@ -1,6 +1,4 @@
 class OffersController < ApplicationController
-  skip_before_action :authenticate_user!, only: []
-
   before_action :set_venue, only: [:show, :edit, :destroy]
 
   def index
