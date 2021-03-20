@@ -14,9 +14,9 @@
 
   <body>
     <div class="d-flex flex-column min-vh-100">
-    <%# render nav bar here %>
      <div class="flex-grow-1">
     <%= yield %>
+    <%= render "shared/navbar" %>
     </div>
     <%= render 'shared/footer' %>
     </div>

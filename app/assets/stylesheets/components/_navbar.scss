@@ -1,3 +1,14 @@
 .nav-item.dropdown li {
   list-style-type: none;
 }
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.btn {
+  background-color: #B9C8C7;
+  border: #B9C8C7;
+  color: white;
+  font-weight: bold;
+}
