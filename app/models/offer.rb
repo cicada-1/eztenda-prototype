@@ -4,8 +4,8 @@ class Offer < ApplicationRecord
 
   CATEGORIES = ["Gin", "Whiskey", "Whisky", "Vodka", "Rum", "Lager", "Bitter", "Cider", "Tonic Water", "Energy Drink"]
 
-  validates :min_bid, precence: true
-  validates :contract_length, precence: true
-  validates :estimated_volume, precence: true
+  validates :min_bid, presence: true
+  validates :contract_length, presence: true
+  validates :estimated_volume, presence: true
   validates :category, inclusion: { in: CATEGORIES }
 end
