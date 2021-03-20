@@ -29,3 +29,15 @@
   background-size: cover;
   position: relative;
 }
+
+.info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 125px auto;
+    max-width: 1500px;
+    justify-content: space-around;
+    font-size: 24px;
+    text-align: center;
+    color: black;
+}
