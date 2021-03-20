@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_20_120025) do
+ActiveRecord::Schema.define(version: 2021_03_20_141625) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,15 +32,6 @@ ActiveRecord::Schema.define(version: 2021_03_20_120025) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "negotiations", force: :cascade do |t|
-    t.bigint "offer_id", null: false
-    t.bigint "bid_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["bid_id"], name: "index_negotiations_on_bid_id"
-    t.index ["offer_id"], name: "index_negotiations_on_offer_id"
   end
 
   create_table "offers", force: :cascade do |t|
@@ -73,9 +64,9 @@ ActiveRecord::Schema.define(version: 2021_03_20_120025) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_venues_on_user_id"
   end
 
-  add_foreign_key "negotiations", "bids"
-  add_foreign_key "negotiations", "offers"
   add_foreign_key "offers", "venues"
 end

@@ -1,2 +1,2 @@
-class Venue < User
+class Venue < ApplicationRecord
 end
