@@ -1,0 +1,14 @@
+.dropdown-and-clear-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px 0;
+
+  p {
+    margin: 0;
+  }
+
+  .dropdown {
+    margin: 0 16px;
+  }
+}
