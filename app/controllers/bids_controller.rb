@@ -16,12 +16,12 @@ class BidsController < ApplicationController
     if @bid.save
       redirect_to bid_path(@bid)
     else
-      render :new 
-    end   
+      render :new
+    end
   end
 
-    
-    
+
+
   end
 
   def destroy
@@ -32,7 +32,4 @@ private
 
 def bid_params
   params[:bid].permit(:offer_amount, :additional)
-end
-
-
 end
