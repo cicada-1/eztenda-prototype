@@ -9,6 +9,9 @@
     color: rgba(0,0,0,0.3);
     height: 120px;
     background-color: darkgray;
+    position: fixed;
+    bottom: 0;
+    margin: 0;
   }
   .footer-links {
     display: flex;
@@ -25,5 +28,4 @@
   .footer-links a:hover {
     opacity: 1;
   }
-  
-  
+
