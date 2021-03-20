@@ -5,6 +5,19 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: white;
+  font-size: 50px;
+}
+
+.hero-text a {
+  color: white;
+  font-size: 25px;
+}
+
+.hero-text a:hover {
+  font-size: 25px;
+  opacity: 0.75;
+  text-decoration: none;
 }
 
 .hero-image {
