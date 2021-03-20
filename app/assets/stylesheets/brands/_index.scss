@@ -1,8 +1,19 @@
 // Import brands controller specific stylesheets here
 
-// centralised card on bid index
-.flex-grow-1 {
-  margin: 0 auto;
+.not-a-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+}
+
+.bid-container {
+  width: 345px;
+  margin: 75px auto;
   float: none;
   margin-bottom: 10px;
 }
+
+.card-product {
+  margin-bottom: 35px;
+}
+
