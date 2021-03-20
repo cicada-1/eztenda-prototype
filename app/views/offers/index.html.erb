@@ -5,8 +5,8 @@
 <% @offers.each do |offer| %>
  <div class="card-product">
   <img class="card-image" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="card-product-infos" style="text-align: left";>
-       <h4 style="padding-left: 37px;"> <%= offer.venue.venue_name %> </h4> 
+  <div class="card-product-infos card-offer">
+       <h4> <%= offer.venue.venue_name %> </h4> 
        <ul>
        <li>Category: <%= offer.category %></li>
     <li>Minimun Bid:  <%= offer.min_bid %> </li>
