@@ -6,7 +6,13 @@ class OffersController < ApplicationController
   end
 
   def index_all
-    @offers = Offer.all
+    if params[:category].present?
+      @dropdown_text = params[:category]
+      @offers = Offer.where(category: params[:category]).order(:created_at)
+    else
+      @dropdown_text = "Select Category"
+      @offers = Offer.all.order(:created_at)
+    end
   end
 
   def show

@@ -1,3 +1,28 @@
-<br>
-<br>
-<p>index_all</p>
+<div class="container">
+  <div class="dropdown-and-clear-button">
+    <p><strong>Filter by category:</strong></p>
+    <div class="dropdown" id="category-dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <%= @dropdown_text %>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <% Offer::CATEGORIES.each do |category| %>
+          <a class="dropdown-item category-item" href="/offers.php?category=<%= category %>"><%= category %></a>
+        <% end %>
+      </div>
+    </div>
+    <%= link_to "Clear filter", offers_path %>
+  </div>
+
+    <div class="offers-list">
+      <% @offers.each do |offer| %>
+        <div class="offer-card">
+          <p><%= offer.venue.venue_name %></p>
+          <p><%= offer.min_bid %></p>
+          <p><%= offer.contract_length %></p>
+          <p><%= offer.estimated_volume %></p>
+          <span id="text-muted">Created <%= time_ago_in_words(offer.updated_at) %> ago</span>
+        </div>
+      <% end %>
+    </div>
+</div>
