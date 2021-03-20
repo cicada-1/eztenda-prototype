@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 2021_03_20_141625) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_brands_on_user_id"
   end
 
   create_table "offers", force: :cascade do |t|
