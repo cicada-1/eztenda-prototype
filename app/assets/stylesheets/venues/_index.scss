@@ -1,13 +1,9 @@
 // Import venues controller specific stylesheets here
 .venue-offers {
-  background-image: linear-gradient(rgba(235, 180, 180, 0.7), rgba(233, 213, 213, 0.3)), url(bottles.jpg);
+  background-image: linear-gradient(rgba(133, 93, 93, 0.7), rgba(0, 0, 0, 0.3)), url(bottles.jpg);
   background-size: cover;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-//   filter: brightness(135%);
-  margin-top: 62px;
-  padding-bottom: 150px;
+  background-position: center;
+  height: 100vh;
 }
 
 .request-cards {
