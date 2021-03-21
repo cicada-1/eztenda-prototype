@@ -1,6 +1,7 @@
-<%= simple_form_for [@brand, @bid] do |f| %>
+<%= simple_form_for [@offer, @bid] do |f| %>
   <div class="form-inputs">
-    <%= f.input :offer_amount, placeholder: '500' %>
+    <%= f.label :offer_amount, label: 'Bid amount (in whole pounds)' %>
+    <%= f.input :offer_amount, placeholder: '500', label: false %>
     <%= f.input :additional, placeholder: '100 branded glasses and 20 branded T-shirts' %>
   </div>
 

@@ -3,15 +3,16 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :venues do
-    resources :offers, only: [:new, :create, :index, :show]
+    resources :offers, only: [:new, :create, :index]
   end
 
-  resources :offers, only: [:destroy]
+  resources :offers, only: [:show, :destroy] do
+    resources :bids, only: [:new, :create]
+  end
   get "/offers", to: "offers#index_all"
-  get "/offers/:id", to: "offers#show_limited", as: :offer_show
   
   resources :brands do
-    resources :bids, only: [:index, :show, :new, :create]
+    resources :bids, only: [:index, :show]
   end
 
   resources :bids, only: [:destroy]
