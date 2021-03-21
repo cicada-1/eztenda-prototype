@@ -1,11 +1,13 @@
-<%= simple_form_for [@offer, @bid] do |f| %>
-  <div class="form-inputs">
-    <%= f.label :offer_amount, label: 'Bid amount (in whole pounds)' %>
-    <%= f.input :offer_amount, placeholder: '500', label: false %>
-    <%= f.input :additional, placeholder: '100 branded glasses and 20 branded T-shirts' %>
-  </div>
+<div class="bid-form-card">
+  <%= simple_form_for [@offer, @bid] do |f| %>
+    <div class="form-inputs">
+      <%= f.label :offer_amount, label: 'Bid amount (in whole pounds)' %>
+      <%= f.input :offer_amount, placeholder: '500', label: false %>
+      <%= f.input :additional, placeholder: '100 branded glasses and 20 branded T-shirts' %>
+    </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, { class: "btn btn-primary", value: "Create Bid" } %>
-  </div>
-<% end %>
+    <div class="form-actions">
+      <%= f.button :submit, { class: "btn btn-primary", value: "Create Bid" } %>
+    </div>
+  <% end %>
+</div>

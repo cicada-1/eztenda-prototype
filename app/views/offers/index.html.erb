@@ -1,27 +1,26 @@
 <div class="venue-offers">
 <br>
 
-<div class="container my-5">
+<div class="container my-5 fs-container">
   <div class="request-cards text-center">
-  <h2>ALL YOUR OFFERS </h2>
+  <h1>My Offers</h1>
     <div class="container">
     <% @offers.each do |offer| %>
     <div class="card-product">
     <img class="card-image" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
         <div class="card-product-infos card-offer">
-        <h4> <%= offer.venue.venue_name %> </h4> 
+        <h4><strong><%= offer.venue.venue_name %></strong></h4> 
             <ul>
-            <li>Category: <%= offer.category %></li>
-                <li>Minimun Bid:  <%= offer.min_bid %> </li>
-                <li>Contract Length:  <%= offer.contract_length %></li>
-                <li>Estimated Volume:  <%= offer.estimated_volume %></li>
+              <li>Category: <%= offer.category %></li>
+              <li>Minimun Bid:  <%= offer.min_bid %> </li>
+              <li>Contract Length:  <%= offer.contract_length %></li>
+              <li>Estimated Volume:  <%= offer.estimated_volume %></li>
             </ul>
-            <p><span id="text-muted">Created <%= time_ago_in_words(offer.updated_at) %> ago</span></p>
+            <span id="text-muted">Created <%= time_ago_in_words(offer.updated_at) %> ago</span>
         </div>
     </div>
-    </div>
     <% end %>
-  </div>  
+    </div>
   </div>
 </div>
 
