@@ -17,9 +17,11 @@
 
 .card-product {
   margin-bottom: 35px;
+  background-color: #f9f9f98a;
 }
 
 .card-product:hover {
+  background-color: white;
   opacity: 0.75;
   color: #EE4F53;
   cursor: pointer;
