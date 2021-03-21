@@ -21,7 +21,9 @@
       <div class="venue-button">
         <a class="venues_btn"><%= link_to 'Venues', venues_path, class: "button" %></a>
       </div>
-      <%= link_to "View All Offers", offers_path, class: "btn btn-primary " %>
+      <div class="brand-buttons">
+      <%= link_to "View All Offers", offers_path, class: "button" %>
+      </div>
       </div>
       <% if user_signed_in? && !current_user.brand.nil? %>
       <%= link_to 'Current Bids', brand_bids_path(current_user.brand), class: "button" %>
