@@ -1,18 +1,20 @@
-
-<div class="bid-container">
-  <div class="bid-cards text-center">
-    <h1>Current Bids</h1>
-  <div class="not-a-grid">
-  <% @bids.each do |bid| %>
-   <div class="card-product">
-    <img class="card-image" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <div class="card-product-infos">
-      <p> <%= bid.brand.brand_name %> </p>
-       <%= bid.offer_amount %>
-       <%= bid.additional %>
-       <span id="text-muted">Created <%= time_ago_in_words(bid.updated_at) %> ago</span>
+<div class="bid-background">
+  <div class="bid-container">
+    <div class="bid-cards text-center">
+      <h1>Current Bids</h1>
+    <div class="not-a-grid">
+    <% @bids.each do |bid| %>
+     <div class="card-product">
+      <img class="card-image" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+        <p> <%= bid.brand.brand_name %> </p>
+         <%= bid.offer_amount %>
+         <%= bid.additional %>
+         <span id="text-muted">Created <%= time_ago_in_words(bid.updated_at) %> ago</span>
+      </div>
+    </div>
+     <% end %>
     </div>
   </div>
-   <% end %>
   </div>
 </div>
