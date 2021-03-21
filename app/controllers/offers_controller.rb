@@ -31,7 +31,7 @@ class OffersController < ApplicationController
   def create
     @offer = Offer.new(offer_params.merge(venue_id: params[:venue_id]))
     if @offer.save
-      redirect_to venue_offers_path
+      redirect_to offer_path(@offer)
     else
       render :new
     end
@@ -42,7 +42,7 @@ class OffersController < ApplicationController
 
   def update
     @offer.update(offer_params)
-    redirect_to venue_offer_path(@offer)
+    redirect_to offer_path(@offer)
   end
 
   def destroy
