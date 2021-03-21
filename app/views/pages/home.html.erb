@@ -29,6 +29,9 @@
       <br>
       <%= link_to 'Brands', brands_path, class: "button" %>
       <%= link_to 'Venues', venues_path, class: "button" %>
+      <% if user_signed_in? && !current_user.brand.nil? %>
+      <%= link_to 'Current Bids', brand_bids_path(current_user.brand), class: "button" %>
+      <% end %>
     </div>
   </div>
 </div>
