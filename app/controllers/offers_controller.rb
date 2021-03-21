@@ -16,11 +16,9 @@ class OffersController < ApplicationController
   end
 
   def show
-    @bids = Bid.where(offer_id: @offer.id)
-  end
-  
-  def show_limited
+    @brand = current_user.brand
     @bid = Bid.new
+    @bids = @offer.bids.order(:offer_amount).reverse_order
   end
 
   def new
