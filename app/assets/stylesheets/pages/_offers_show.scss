@@ -1,0 +1,25 @@
+.fs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.offer-show-container {
+  margin-top: 100px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+
+  h1, h2 {
+    margin-bottom: 16px;
+  }
+
+  form {
+    height: 300px;
+    width: auto;
+    position: sticky;
+    top: 100px;
+  }
+}

@@ -8,14 +8,15 @@ class BidsController < ApplicationController
   end
 
   def new
-    @brand = Brand.find(params[:brand_id])
+    @offer = Offer.find(params[:offer_id])
     @bid = Bid.new
   end
 
   def create
-    @bid = Bid.new(bid_params.merge(brand_id: params[:brand_id]))
+    @offer = Offer.find(params[:offer_id])
+    @bid = Bid.new(bid_params.merge(offer_id: params[:offer_id], brand_id: current_user.brand.id))
     if @bid.save!
-      redirect_to brand_bids_path
+      redirect_to offer_path(@offer)
     else
       render :new
     end

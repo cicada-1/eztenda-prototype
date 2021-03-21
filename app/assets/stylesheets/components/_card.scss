@@ -35,7 +35,7 @@
 }
 
 
-.all-offers-card {
+.all-offers-card, .show-offer-card, .show-bid-card {
   margin-bottom: 16px;
   justify-content: space-between;
 
@@ -69,5 +69,7 @@ h4 {
 }
 }
 
-
+.show-offer-card {
+  background-color: #EE4F53;
+}
 
