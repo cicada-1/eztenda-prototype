@@ -14,14 +14,18 @@
     object-fit: cover;
     border-radius: 50%;
   }
-  
+
   h2 {
     font-size: 16px;
     font-weight: bold;
     margin: 0;
     color: black;
   }
-  
+
+  .card-product:hover {
+  transform: translateY(5px)
+}
+
   .card-product-infos {
     padding: 16px;
   }
@@ -59,5 +63,12 @@ h4 {
 }
 }
 
+///////// Bid Card
 
+// .bid-cards {
+//   width: 375px;
+//   margin: 75px auto;
+//   float: none;
+//   margin-bottom: 10px;
+// }
 
