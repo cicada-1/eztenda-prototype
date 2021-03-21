@@ -25,10 +25,7 @@
           </div>
         </div>
       </div>
-      <h1>Ez tenda</h1>
-      <br>
-      <%= link_to 'Brands', brands_path, class: "button" %>
-      <%= link_to 'Venues', venues_path, class: "button" %>
+      <%= link_to "View All Offers", offers_path, class: "btn btn-primary " %>
       <% if user_signed_in? && !current_user.brand.nil? %>
       <%= link_to 'Current Bids', brand_bids_path(current_user.brand), class: "button" %>
       <% end %>
