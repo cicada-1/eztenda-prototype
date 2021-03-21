@@ -37,9 +37,10 @@
 
 .all-offers-card {
   margin-bottom: 16px;
+  justify-content: space-between;
 
   img {
-    margin: 0 16px;
+    margin: 0 24px;
   }
 
   .min-bid-est-vol {
@@ -47,6 +48,15 @@
   }
 
   #min-bid {
+    margin-right: 32px;
+  }
+
+  .card-product-infos {
+    flex-grow: 1;
+  }
+
+  .bid-button {
+    margin-left: 24px;
     margin-right: 32px;
   }
 }
