@@ -1,29 +1,26 @@
+
 <div class="hero-image">
   <div class="hero-text">
     <div class="opaque-background">
+      <div class="page-title"><h1>A great deal better</h1></div>
       <div id="slideshow">
         <div>
-          <h1>Hackerthon they said...</h1>
+          <h3>A better way for bars and brand to do business</h3>
         </div>
         <div>
-          <h1>Great idea they said...</h1>
+          <h3>An online auction where bars can tender their listings and brand can bid for them</h3>
         </div>
         <div>
-          <h1>LIES... THE LIES!!!</h1>
+          <h3>Empowering bars and brands</h3>
         </div>
       </div>
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-        </div>
+      <div class="index-buttons">
+      <div class="brand-buttons">
+        <a class="brand-btn"><%= link_to 'Brands', brands_path, class: "button" %></a>
+      </div>
+      <div class="venue-button">
+        <a class="venues_btn"><%= link_to 'Venues', venues_path, class: "button" %></a>
+      </div>
       </div>
       <%= link_to "View All Offers", offers_path, class: "btn btn-primary " %>
       <% if user_signed_in? && !current_user.brand.nil? %>
