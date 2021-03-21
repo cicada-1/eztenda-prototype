@@ -40,7 +40,7 @@ li {
   margin: 50px auto;
   position: relative;
   width: 500px;
-  height: 240px;
+  height: 100px;
   padding: 10px;
   box-shadow: 0 0 20px rgba(0,0,0,0.4);
   background-color: transparent;
@@ -62,35 +62,55 @@ li {
   text-align: center;
 }
 .page-title h1 {
-  color: white;
+  color: #EE4F53;
   padding-top: 80px;
+  font-size: 50px;
+  font-weight: 800;
 }
 
 .index-buttons {
   display: flex;
   justify-content: center;
+  margin-bottom: 100px;
 }
 
 .brand-buttons {
   text-align: center;
-  border: solid 1px black;
   width: 200px;
-  background-color: blue;
+  border: solid 1px #EE4F53;
+}
+.brand-buttons:hover {
+  background-color: #EE4F53;
+  color: white;
+  width: 200px;
 }
 .brand-buttons a {
   font-weight: medium;
+  color: #EE4F53;
+}
+.brand-buttons a:hover {
+  font-weight: medium;
+  color: white;
 }
 
-.venue-buttons {
+.venue-button {
   text-align: center;
-  border: solid 1px black;
   width: 200px;
-  background-color: blue;
+  border: solid 1px white;
 }
-.brand-buttons a {
+.venue-button:hover {
+  background-color: #EE4F53;
+  color: white;
+}
+.venue-button a {
   font-weight: medium;
+  color: #EE4F53;
 }
+.venue-button a:hover {
+  font-weight: medium;
+  color: white;
 
+}
 
 
 
