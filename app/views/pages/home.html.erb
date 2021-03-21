@@ -1,10 +1,53 @@
 <div class="hero-image">
   <div class="hero-text">
     <div class="opaque-background">
+      <div id="slideshow">
+        <div>
+          <h1>Hackerthon they said...</h1>
+        </div>
+        <div>
+          <h1>Great idea they said...</h1>
+        </div>
+        <div>
+          <h1>LIES... THE LIES!!!</h1>
+        </div>
+      </div>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
       <h1>Ez tenda</h1>
       <br>
       <%= link_to 'Brands', brands_path, class: "button" %>
       <%= link_to 'Venues', venues_path, class: "button" %>
+      <% if user_signed_in? && !current_user.brand.nil? %>
+      <%= link_to 'Current Bids', brand_bids_path(current_user.brand), class: "button" %>
+      <% end %>
     </div>
   </div>
 </div>
+
+
+
+<!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div> -->

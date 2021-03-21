@@ -14,14 +14,21 @@
     object-fit: cover;
     border-radius: 50%;
   }
-  
+
   h2 {
     font-size: 16px;
     font-weight: bold;
     margin: 0;
     color: black;
   }
-  
+
+  .card-product:hover {
+  opacity: 0.75;
+  color: #EE4F53;
+  cursor: pointer;
+  transform: translateY(5px)
+}
+
   .card-product-infos {
     padding: 16px;
   }
@@ -72,4 +79,14 @@ h4 {
 .show-offer-card {
   background-color: #EE4F53;
 }
+
+///////// Bid Card
+
+// .bid-cards {
+//   width: 375px;
+//   margin: 75px auto;
+//   float: none;
+//   margin-bottom: 10px;
+// }
+
 
