@@ -1,19 +1,41 @@
 // Import brands controller specific stylesheets here
 
+.bid-background {
+ background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)), url(morebarrels.jpg);
+  background-size: cover;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  filter: brightness(125%);
+}
+
 .not-a-grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 16px;
 }
 
-.bid-container {
-  width: 345px;
+.card-product {
+  margin-bottom: 35px;
+  background-color: #f9f9f98a;
+}
+
+.card-product:hover {
+  background-color: white;
+  opacity: 0.75;
+  color: #EE4F53;
+  cursor: pointer;
+  transform: translateY(5px)
+}
+
+.bid-cards {
+  width: 375px;
   margin: 75px auto;
   float: none;
   margin-bottom: 10px;
 }
 
-.card-product {
-  margin-bottom: 35px;
+.bid-cards h1 {
+  color: white;
 }
 
