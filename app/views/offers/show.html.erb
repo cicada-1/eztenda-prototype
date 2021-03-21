@@ -1,37 +1,39 @@
-<div class="fs-container">
-  <div class="offer-show-container">
-    <div class="offers-bids-list">
+<div class="venue-offers">
+  <div class="fs-container">
+    <div class="offer-show-container">
+      <div class="offers-bids-list">
 
-      <h1>Offer</h1>
-      <div class="card-product show-offer-card">
-        <img class="card-image" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-        <div class="card-product-infos">
-          <p id="offer-card-title"><strong><%= @offer.venue.venue_name %> - <%= @offer.category %></strong></p>
-          <div class="min-bid-est-vol">
-            <p id="min-bid">Minimum Bid: £<%= @offer.min_bid %></p>
-            <p id="est-vol">Estimated Volume: <%= @offer.estimated_volume %></p>
-          </div>
-          <p><%= @offer.bids.count %> Bids</p>
-          <span id="text-muted">Created <%= time_ago_in_words(@offer.updated_at) %> ago</span>
-        </div>
-      </div>
-
-      <h2>Current Bids</h2>
-
-      <% @bids.each do |bid| %>
-        <div class="card-product show-bid-card">
+        <h1>Offer</h1>
+        <div class="card-product show-offer-card" id="show-offer-card">
           <img class="card-image" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
           <div class="card-product-infos">
-            <p id="offer-card-title"><strong><%= bid.brand.brand_name %></strong></p>
-            <p>Bid: <strong>£<%= bid.offer_amount %></strong></p>
-            <p>Extras: <%= bid.additional %></p>
+            <p id="offer-card-title"><strong><%= @offer.venue.venue_name %> - <%= @offer.category %></strong></p>
+            <div class="min-bid-est-vol">
+              <p id="min-bid">Minimum Bid: £<%= @offer.min_bid %></p>
+              <p id="est-vol">Estimated Volume: <%= @offer.estimated_volume %></p>
+            </div>
+            <p><%= @offer.bids.count %> Bids</p>
+            <span id="text-muted">Created <%= time_ago_in_words(@offer.updated_at) %> ago</span>
           </div>
         </div>
-      <% end %>
-        
+
+        <h2>Current Bids</h2>
+
+        <% @bids.each do |bid| %>
+          <div class="card-product show-bid-card">
+            <img class="card-image" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <div class="card-product-infos">
+              <p id="offer-card-title"><strong><%= bid.brand.brand_name %></strong></p>
+              <p>Bid: <strong>£<%= bid.offer_amount %></strong></p>
+              <p>Extras: <%= bid.additional %></p>
+            </div>
+          </div>
+        <% end %>
+          
+      </div>
+
+      <%= render partial: 'bids/form' %>
+
     </div>
-
-    <%= render partial: 'bids/form' %>
-
   </div>
 </div>

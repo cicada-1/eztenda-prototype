@@ -7,7 +7,6 @@
 }
 
 .offer-show-container {
-  margin-top: 100px;
   width: 80%;
   display: flex;
   justify-content: space-between;
@@ -16,10 +15,13 @@
     margin-bottom: 16px;
   }
 
-  form {
-    height: 300px;
+  h1 {
+    margin-top: 24px;
+  }
+
+  .bid-form-card {
     width: auto;
     position: sticky;
-    top: 100px;
+    top: 90px;
   }
 }

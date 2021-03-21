@@ -7,11 +7,11 @@
 }
 
 .index-container {
-  margin-top: 100px;
   width: 60%;
 
   h1 {
     text-align: center;
+    margin-top: 24px;
     margin-bottom: 32px;
   }
 }
@@ -20,7 +20,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
   margin-bottom: 32px;
 
   p {

@@ -7,9 +7,9 @@
      <div class="card-product">
       <img class="card-image" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
       <div class="card-product-infos">
-        <p> <%= bid.brand.brand_name %> </p>
-         <%= bid.offer_amount %>
-         <%= bid.additional %>
+        <p><strong><%= (Offer.find(bid.offer_id)).venue.venue_name %></strong></p>
+        <p>Bid: £<%= bid.offer_amount %></p>
+        <p>Extras: <%= bid.additional %></p>
          <span id="text-muted">Created <%= time_ago_in_words(bid.updated_at) %> ago</span>
       </div>
     </div>
