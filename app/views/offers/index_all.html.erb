@@ -1,5 +1,6 @@
 <div class="fs-container">
   <div class="index-container">
+    <h1 class="index-title">Current Offers</h1>
     <div class="dropdown-and-clear-button">
       <p><strong>Filter by category:</strong></p>
       <div class="dropdown" id="category-dropdown">
@@ -22,12 +23,13 @@
           <div class="card-product-infos">
             <p id="offer-card-title"><strong><%= offer.venue.venue_name %> - <%= offer.category %></strong></p>
             <div class="min-bid-est-vol">
-              <p id="min-bid">£<%= offer.min_bid %></p>
-              <p id="est-vol"><%= offer.estimated_volume %></p>
+              <p id="min-bid">Minimum Bid: £<%= offer.min_bid %></p>
+              <p id="est-vol">Estimated Volume: <%= offer.estimated_volume %></p>
             </div>
             <p><%= offer.bids.count %> Bids</p>
             <span id="text-muted">Created <%= time_ago_in_words(offer.updated_at) %> ago</span>
           </div>
+          <%= link_to "Make a bid", offer_path(offer), class: "btn bid-button" %>
         </div>
       <% end %>
     </div>
