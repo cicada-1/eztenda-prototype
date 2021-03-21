@@ -10,8 +10,12 @@
   margin-bottom: 35px;
 }
 
+.card-product:hover {
+  transform: translateY(5px)
+}
+
 .request-cards {
-  width: 345px;
+  width: 375px;
   margin: 75px auto;
   float: none;
   margin-bottom: 10px;
