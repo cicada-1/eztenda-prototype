@@ -6,7 +6,11 @@
       <button class="btn btn-outline-success" type="submit">Search</button>
     </form>
     <div class="navbar-right">
-      <%= link_to "Create offer", new_venue_offer_path(current_user.venue), class: "dropdown-item btn new-offer" %>
+      <% if user_signed_in? %>
+        <%= link_to "Create offer", new_venue_offer_path(current_user.venue), class: "btn new-offer" %>
+      <% else %>
+        <a class="btn new-offer" href="/users/sign_in">Create offer</a>
+      <% end %>
       <li class="nav-item dropdown">
         <i class="fas fa-bars dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

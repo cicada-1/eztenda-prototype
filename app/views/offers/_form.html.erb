@@ -1,8 +1,8 @@
 <%= simple_form_for [@venue, @offer] do |f| %>
   <div class="form-inputs">
-    <%= f.input :min_bid, placeholder: '500' %>
+    <%= f.input :min_bid, label: 'Minimum bid (in whole pounds)', placeholder: '500' %>
     <%= f.input :contract_length, label: 'Contract length (in months)', placeholder: '12 months' %>
-    <%= f.input :estimated_volume, placeholder: '1000 bottles' %>
+    <%= f.input :estimated_volume, label: 'Estimated volume of sales', placeholder: '1000 bottles' %>
     <%= f.input :category, collection: Offer::CATEGORIES, selected: "Gin" %>
   </div>
 
