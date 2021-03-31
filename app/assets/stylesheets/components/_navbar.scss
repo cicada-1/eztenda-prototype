@@ -36,3 +36,12 @@
   font-size: 27px;
   text-shadow: 1px 1px 0 #EE4F53;
 }
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+
+  .new-offer {
+    margin-right: 16px;
+  }
+}
